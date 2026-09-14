@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#f6f2e9" />
+<title>English Adventures — Ольга Царегородцева</title>
+<style>
+:root{
+  --bg:#f6f2e9;--paper:#fffdf8;--ink:#18332b;--muted:#6d746f;--green:#164d3b;--green2:#2f6b56;
+  --orange:#dd7548;--orange2:#f19a45;--line:rgba(24,51,43,.13);--shadow:0 22px 60px rgba(31,58,45,.11);
+  --radius:30px;--radius-sm:20px;--max:1240px;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Manrope,"Segoe UI",Arial,sans-serif;line-height:1.5;overflow-x:hidden}
+body.menu-open{overflow:hidden}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button{cursor:pointer}
+::selection{background:#d9e8de;color:#15372b}
+.scroll-progress{position:fixed;left:0;top:0;height:3px;width:0;background:linear-gradient(90deg,var(--orange),var(--green));z-index:1000}
+.shell{width:min(var(--max),calc(100% - 48px));margin:auto}.section{padding:92px 0;position:relative}.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:var(--green2)}
+.section-title{font-size:clamp(34px,4.4vw,66px);line-height:.96;letter-spacing:-.045em;margin:12px 0 20px;max-width:960px}.section-lead{font-size:18px;color:var(--muted);max-width:760px}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}.reveal.in{opacity:1;transform:none}
+/* HEADER */
+.header{position:fixed;inset:0 0 auto;z-index:200;padding:16px 0;transition:.35s}.header.scrolled{background:rgba(246,242,233,.86);backdrop-filter:blur(18px);border-bottom:1px solid rgba(24,51,43,.08);padding:10px 0}
+.nav{display:flex;align-items:center;gap:28px}.brand{display:flex;align-items:center;gap:11px;font-weight:900;line-height:1.05;margin-right:auto}.logo-mark{width:44px;height:44px;border-radius:50%;background:linear-gradient(150deg,var(--orange2) 0 42%,var(--green) 43%);position:relative;box-shadow:inset 0 0 0 4px rgba(255,255,255,.55)}.logo-mark:after{content:"";position:absolute;left:8px;right:7px;bottom:10px;height:14px;background:var(--paper);clip-path:polygon(0 100%,30% 25%,47% 62%,63% 0,100% 100%)}.brand small{display:block;font-weight:500;color:#747a75;font-size:10px;margin-top:3px}
+.navlinks{display:flex;align-items:center;gap:22px;font-size:13px;font-weight:650}.navlinks a{position:relative}.navlinks a:after{content:"";position:absolute;left:0;bottom:-7px;width:0;height:2px;background:var(--orange);transition:.25s}.navlinks a:hover:after{width:100%}
+.btn{border:0;border-radius:999px;padding:13px 19px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;gap:11px;transition:transform .2s,box-shadow .2s,background .2s;color:white;background:var(--green)}.btn:hover{transform:translateY(-2px);box-shadow:0 12px 25px rgba(22,77,59,.18)}.btn.orange{background:linear-gradient(135deg,var(--orange),#c95c35)}.btn.light{background:rgba(255,255,255,.91);color:var(--green);border:1px solid rgba(22,77,59,.25)}.btn .arrow{transition:transform .2s}.btn:hover .arrow{transform:translateX(4px)}
+.menu-btn{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:rgba(255,255,255,.7);align-items:center;justify-content:center}.menu-btn span,.menu-btn span:before,.menu-btn span:after{display:block;width:18px;height:2px;background:var(--ink);position:relative}.menu-btn span:before,.menu-btn span:after{content:"";position:absolute;left:0}.menu-btn span:before{top:-6px}.menu-btn span:after{top:6px}
+/* HERO */
+.hero{min-height:860px;padding:102px 0 35px;position:relative}.hero-card{min-height:690px;border-radius:0 0 86px 86px;overflow:hidden;position:relative;background:#dfe9e5;box-shadow:var(--shadow)}.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 44%;transform:scaleX(-1) scale(1.015);filter:saturate(.95) contrast(.98);will-change:transform}.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(250,248,243,.98) 0%,rgba(250,248,243,.95) 29%,rgba(250,248,243,.62) 47%,rgba(250,248,243,.1) 66%,rgba(250,248,243,0) 100%)}
+.hero-content{position:relative;z-index:2;padding:126px 7.3% 78px;width:58%}.hero h1{font-size:clamp(52px,6.2vw,88px);line-height:.92;letter-spacing:-.055em;margin:15px 0 26px}.hero h1 span{color:var(--green)}.hero-copy{font-size:17px;max-width:640px;color:#45514c;margin:0 0 26px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.trustline{margin-top:17px;font-size:12px;color:#6c756f}.signature{position:absolute;right:5.5%;top:20%;z-index:3;color:rgba(22,77,59,.62);font-family:"Segoe Script","Comic Sans MS",cursive;font-size:23px;transform:rotate(-8deg);text-align:center}.name-tag{position:absolute;z-index:3;right:34%;bottom:96px;background:rgba(255,255,255,.88);backdrop-filter:blur(12px);padding:14px 18px;border-radius:16px;box-shadow:0 12px 30px rgba(20,50,39,.12);font-size:12px}.name-tag strong{display:block;font-size:13px}
+.organic{position:absolute;background:var(--bg);z-index:3;pointer-events:none}.organic.left{width:135px;height:250px;left:-70px;top:210px;border-radius:47% 53% 65% 35% / 60% 42% 58% 40%;transform:rotate(8deg)}.organic.right{width:150px;height:280px;right:-72px;bottom:30px;border-radius:58% 42% 45% 55% / 43% 65% 35% 57%;transform:rotate(-10deg)}
+.leaf{position:absolute;z-index:4;width:130px;height:160px;opacity:.45;pointer-events:none}.leaf svg{width:100%;height:100%}.leaf.a{left:5px;bottom:20px;transform:rotate(-14deg)}.leaf.b{right:0;bottom:16px;transform:scaleX(-1) rotate(-12deg)}
+.quickbar{position:relative;z-index:10;width:min(1120px,calc(100% - 70px));margin:-48px auto 0;background:rgba(255,255,255,.95);backdrop-filter:blur(15px);border-radius:24px;padding:18px 22px;box-shadow:0 20px 50px rgba(28,52,43,.14);display:grid;grid-template-columns:repeat(4,1fr) 180px;gap:0}.quick{display:flex;gap:12px;align-items:center;padding:5px 16px;border-right:1px solid var(--line)}.quick:nth-child(4){border-right:0}.quick i{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:#f2f6f1;color:var(--green);font-style:normal;font-size:19px}.quick strong{font-size:12px;display:block}.quick span{font-size:10px;color:var(--muted)}
+/* LANGUAGE */
+.language-card{margin-top:38px;background:rgba(255,255,255,.72);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:grid;grid-template-columns:46% 54%;box-shadow:0 12px 40px rgba(34,55,45,.05)}.language-visual{min-height:400px;position:relative;overflow:hidden;background:linear-gradient(145deg,#dbe8e1,#adc7b7)}.language-art{display:grid;place-items:center;background:radial-gradient(circle at 30% 25%,#f1d2ae 0 8%,transparent 9%),linear-gradient(145deg,#dae8df,#aac4b5)}.language-art svg{position:absolute;inset:0;width:100%;height:100%;fill:none;stroke:rgba(255,255,255,.56);stroke-width:2}.language-art svg path:last-child{stroke:rgba(22,77,59,.62);stroke-width:4}.language-word{position:relative;z-index:2;font-size:clamp(48px,7vw,92px);font-weight:950;letter-spacing:-.07em;color:rgba(255,255,255,.86);transform:rotate(-7deg)}.language-copy{padding:55px}.language-copy h3{font-size:44px;margin:0 0 14px;letter-spacing:-.03em}.language-copy p{color:#59635e;margin:0 0 22px}
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:38% 1fr;gap:54px;align-items:stretch}
+.about-portrait{min-height:640px;border-radius:54px 54px 120px 54px;overflow:hidden;position:relative;background:#cfded5}
+.about-portrait img{width:100%;height:100%;object-fit:cover;object-position:center 22%;transform:scale(1.01)}
+.about-copy{background:rgba(255,255,255,.48);border-radius:var(--radius);padding:48px;display:flex;flex-direction:column}
+.about-copy h2{font-size:52px;letter-spacing:-.04em;margin:0 0 12px}
+.about-intro{font-size:18px;line-height:1.55;color:#34463e;margin:0 0 28px;max-width:720px}
+.about-facts{display:grid;grid-template-columns:.78fr 1.35fr;gap:14px;margin-top:auto}
+.about-fact{position:relative;padding:24px 25px;border-radius:24px;background:#fff;border:1px solid var(--line);overflow:hidden;min-height:190px}
+.about-fact-accent{background:linear-gradient(145deg,#164d3b,#265f4b);color:white;display:flex;flex-direction:column;justify-content:flex-end}
+.about-fact:nth-child(3){grid-column:1/-1;min-height:auto}
+.about-fact-label{font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);margin-bottom:12px}
+.about-fact-accent .about-fact-label{color:#f5bd88}
+.about-number{font-size:82px;line-height:.78;font-weight:950;letter-spacing:-.07em;margin:16px 0 12px}
+.about-fact h3{font-size:18px;line-height:1.2;margin:0;max-width:180px}
+.about-list{list-style:none;margin:0;padding:0;display:grid;gap:13px;color:#45524c}
+.about-list li{padding-left:18px;position:relative;line-height:1.45}
+.about-list li:before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--orange)}
+.about-fact p{margin:0;color:#45524c;line-height:1.55}
+.about-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.about-tags span{padding:8px 11px;border-radius:999px;background:#f1f5f1;border:1px solid rgba(22,77,59,.10);font-size:12px;font-weight:800;color:var(--green)}
+/* METHOD */
+.method{background:var(--paper);border-radius:64px}.method-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:36px}.method-item{padding:27px 20px;border:1px solid var(--line);border-radius:20px;background:#fff;min-height:260px;transition:.3s;position:relative;overflow:hidden}.method-item:hover{transform:translateY(-8px);box-shadow:0 18px 45px rgba(28,53,43,.09)}.method-icon{font-size:28px;margin-bottom:24px}.method-item h3{font-size:16px;line-height:1.15;margin:0 0 12px}.method-item p{font-size:13px;color:#6a726e}.route{margin:34px 0 0;display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:12px;font-weight:750}.route .node{display:flex;align-items:center;gap:8px}.route .node b{width:33px;height:33px;border-radius:50%;display:grid;place-items:center;background:#f0f5f1;color:var(--green)}.route .dash{flex:1;min-width:26px;height:1px;border-top:2px dashed #91a99b;position:relative}.route .dash:after{content:"›";position:absolute;right:-1px;top:-12px;color:#6e8e7c;font-size:18px}.method-quote{text-align:center;margin:28px auto 0;max-width:850px;font-size:17px;color:#65716a}
+/* PRICES */
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}.price{background:rgba(255,255,255,.78);border:1px solid var(--line);border-radius:24px;padding:30px;display:flex;flex-direction:column;min-height:465px;transition:.3s;position:relative}.price:hover{transform:translateY(-7px);box-shadow:0 20px 50px rgba(34,59,48,.08)}.price.featured{border:2px solid var(--orange);background:#fffaf6;transform:translateY(-8px)}.price.featured:hover{transform:translateY(-14px)}.badge{position:absolute;right:20px;top:18px;font-size:10px;text-transform:uppercase;letter-spacing:.11em;color:var(--orange);font-weight:900}.price h3{font-size:21px;margin:10px 0 4px}.price .cost{font-size:30px;font-weight:900;letter-spacing:-.03em;margin:5px 0 18px}.price p{font-size:14px;color:#5d6761}.price ul{padding-left:18px;color:#5d6761;font-size:13px;margin-bottom:25px}.price .btn{margin-top:auto;width:100%}
+.form-strip{margin-top:26px;border-radius:25px;background:linear-gradient(105deg,#e5ede4,#f4f0e7);padding:24px 26px;box-shadow:inset 0 0 0 1px rgba(22,77,59,.06)}.form-strip h3{margin:0 0 6px}.form-strip p{margin:0 0 18px;font-size:13px;color:#5d6861}.inline-form{display:grid;grid-template-columns:1fr .8fr 1.1fr 1.1fr 1.1fr auto;gap:8px}.field{min-width:0;background:white;border:1px solid rgba(24,51,43,.12);border-radius:12px;padding:12px 13px;color:var(--ink);outline:none}.field:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(22,77,59,.08)}
+/* REVIEWS */
+.reviews-stage{display:grid;grid-template-columns:1.3fr 1fr;gap:18px;margin-top:36px}.review-main{background:white;border-radius:30px;padding:38px;display:grid;grid-template-columns:170px 1fr;gap:30px;align-items:center}.review-photo-wrap{width:170px;display:flex;flex-direction:column;align-items:center;gap:11px}.review-photo{width:170px;height:170px;border-radius:50%;object-fit:cover;object-position:center;box-shadow:0 14px 35px rgba(22,77,59,.15),inset 0 0 0 1px rgba(22,77,59,.08);border:5px solid rgba(255,255,255,.92);transition:transform .3s,box-shadow .3s}.review-photo-wrap:hover .review-photo{transform:scale(1.025);box-shadow:0 18px 42px rgba(22,77,59,.20)}.quote-mark{font-size:64px;color:#e2c491;line-height:.5}.review-main blockquote{font-size:24px;line-height:1.2;margin:15px 0}.review-main small{color:var(--muted)}.review-small-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.review-small{background:#fff;border-radius:20px;padding:24px;font-size:15px;display:flex;flex-direction:column;justify-content:center}.review-small:before{content:"“";font-size:34px;color:var(--orange);line-height:.7;margin-bottom:10px}
+/* FINAL */
+.final-card{background:var(--green);color:white;border-radius:42px;overflow:hidden;min-height:390px;position:relative;isolation:isolate}.final-card:before{content:"";position:absolute;right:-90px;top:-125px;width:370px;height:370px;border-radius:50%;background:radial-gradient(circle,rgba(241,154,69,.28),rgba(241,154,69,0) 68%);z-index:-1}.final-card:after{content:"";position:absolute;left:-130px;bottom:-180px;width:430px;height:430px;border:1px solid rgba(255,255,255,.1);border-radius:48% 52% 62% 38%;box-shadow:0 0 0 44px rgba(255,255,255,.025),0 0 0 88px rgba(255,255,255,.018);z-index:-1}.final-copy{padding:68px 72px;display:flex;flex-direction:column;justify-content:center;position:relative;min-height:390px}.final-copy h2{font-size:52px;line-height:.98;letter-spacing:-.045em;margin:0 0 20px;max-width:820px}.final-copy p{color:#dbe7e1;max-width:700px}.final-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:17px}.final-copy .btn.light{background:transparent;border-color:rgba(255,255,255,.35);color:white}.topo{position:absolute;right:-38px;bottom:-68px;width:430px;height:300px;opacity:.13}
+/* FOOTER */
+.footer{padding:32px 0 48px}.footer-row{display:flex;align-items:center;gap:24px;padding-top:22px;border-top:1px solid var(--line);font-size:11px;color:#67706b}.footer-row .brand{font-size:13px}.footer-spacer{margin-left:auto}.footer a:hover{color:var(--orange)}
+/* MODAL */
+.modal{position:fixed;inset:0;z-index:500;background:rgba(17,34,28,.52);backdrop-filter:blur(12px);display:grid;place-items:center;padding:20px;opacity:0;pointer-events:none;transition:.25s}.modal.open{opacity:1;pointer-events:auto}.modal-card{width:min(620px,100%);max-height:92vh;overflow:auto;background:var(--paper);border-radius:30px;padding:30px;box-shadow:0 30px 80px rgba(0,0,0,.25);transform:translateY(20px) scale(.98);transition:.3s}.modal.open .modal-card{transform:none}.modal-head{display:flex;gap:20px;align-items:center;margin-bottom:20px}.modal-head h3{font-size:30px;margin:0}.close{margin-left:auto;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:white;font-size:20px}.modal-form{display:grid;gap:10px}.modal-form .field{width:100%;padding:14px}.demo-status{display:none;margin-top:12px;padding:11px 13px;border-radius:12px;background:#edf4ee;color:var(--green);font-size:12px}.demo-status.show{display:block}
+@media (max-width:1050px){.navlinks,.nav>.btn{display:none}.menu-btn{display:flex}.hero{padding-top:78px}.hero-card{min-height:700px}.hero-content{width:67%;padding-top:135px}.quickbar{grid-template-columns:repeat(2,1fr);margin-top:-45px}.quick{border-bottom:1px solid var(--line)}.quickbar>.btn{grid-column:1/-1;margin-top:8px}.language-card{grid-template-columns:1fr 1fr}.about-grid{grid-template-columns:1fr}.about-portrait{min-height:560px}.about-facts{grid-template-columns:.75fr 1.25fr}.method-grid{grid-template-columns:repeat(2,1fr)}.price-grid{grid-template-columns:1fr}.price.featured{transform:none}.inline-form{grid-template-columns:1fr 1fr}.inline-form .btn{grid-column:1/-1}.reviews-stage{grid-template-columns:1fr}.mobile-panel{display:flex!important}}
+.mobile-panel{display:none;position:fixed;inset:75px 14px auto;z-index:210;background:rgba(255,253,248,.97);backdrop-filter:blur(20px);border:1px solid var(--line);border-radius:24px;padding:18px;flex-direction:column;gap:6px;box-shadow:var(--shadow);opacity:0;transform:translateY(-12px);pointer-events:none;transition:.25s}.mobile-panel.open{opacity:1;transform:none;pointer-events:auto}.mobile-panel a,.mobile-panel button{padding:14px;border-radius:13px}.mobile-panel a:hover{background:#eef3ef}
+@media (max-width:720px){.shell{width:min(100% - 26px,var(--max))}.section{padding:66px 0}.header{padding:10px 0}.brand span{font-size:14px}.logo-mark{width:38px;height:38px}.hero{min-height:auto;padding-top:70px}.hero-card{min-height:740px;border-radius:0 0 46px 46px}.hero-img{object-position:30% center;transform:scaleX(-1) scale(1.04)}.hero-overlay{background:linear-gradient(180deg,rgba(250,248,243,.97) 0%,rgba(250,248,243,.93) 38%,rgba(250,248,243,.3) 64%,rgba(250,248,243,0) 100%)}.hero-content{width:100%;padding:88px 22px 0}.hero h1{font-size:48px;max-width:500px}.hero-copy{font-size:15px;max-width:500px}.hero-actions .btn{width:100%}.signature,.name-tag,.organic,.leaf{display:none}.quickbar{width:calc(100% - 22px);grid-template-columns:1fr 1fr;padding:12px;margin-top:-24px;border-radius:18px}.quick{padding:9px 7px}.quick i{width:34px;height:34px}.language-card{grid-template-columns:1fr}.language-visual{min-height:260px}.language-copy{padding:28px}.language-copy h3{font-size:34px}.about-copy{padding:28px}.about-copy h2{font-size:42px}.about-intro{font-size:16px}.about-facts{grid-template-columns:1fr}.about-fact:nth-child(3){grid-column:auto}.about-number{font-size:68px}.method{border-radius:36px}.method-grid{grid-template-columns:1fr}.method-item{min-height:auto}.route{gap:7px}.route .dash{min-width:14px}.price{min-height:auto}.form-strip{padding:20px}.inline-form{grid-template-columns:1fr}.reviews-stage{gap:12px}.review-main{grid-template-columns:1fr;padding:25px}.review-monogram{width:110px;height:110px;font-size:30px}.review-main blockquote{font-size:21px}.review-small-grid{grid-template-columns:1fr}.final-card{border-radius:30px}.final-copy{padding:42px 26px;min-height:360px}.final-copy h2{font-size:38px}.final-actions .btn{width:100%}.footer-row{align-items:flex-start;flex-direction:column}.footer-spacer{display:none}}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="scroll-progress" id="progress"></div>
+<header class="header" id="header">
+  <div class="shell nav">
+    <a class="brand" href="#top"><span class="logo-mark"></span><span>English<br>Adventures<small>Ольга Царегородцева</small></span></a>
+    <nav class="navlinks" aria-label="Основное меню">
+      <a href="#top">Главная</a><a href="#about">Обо мне</a><a href="#method">Как проходят занятия</a><a href="#prices">Форматы и цены</a><a href="#reviews">Отзывы</a>
+    </nav>
+    <button class="btn orange js-modal">Записаться на пробный урок <span class="arrow">→</span></button>
+    <button class="menu-btn" id="menuBtn" aria-label="Открыть меню"><span></span></button>
+  </div>
+</header>
+<div class="mobile-panel" id="mobilePanel">
+  <a href="#top">Главная</a><a href="#about">Обо мне</a><a href="#method">Как проходят занятия</a><a href="#prices">Форматы и цены</a><a href="#reviews">Отзывы</a>
+  <button class="btn orange js-modal">Записаться на пробный урок <span class="arrow">→</span></button>
+</div>
+<main id="top">
+<section class="hero">
+  <div class="hero-card">
+    <img class="hero-img" id="heroImg" src="assets/olga-hero.png" alt="Ольга Царегородцева в горах">
+    <div class="hero-overlay"></div><div class="organic left"></div><div class="organic right"></div>
+    <div class="leaf a"><svg viewBox="0 0 100 140" fill="none" stroke="#5c7c63" stroke-width="1.4"><path d="M45 138C43 97 51 52 79 7"/><path d="M48 112C28 102 16 87 8 68M55 88C75 78 84 63 92 48M61 64C45 55 37 42 33 28"/><ellipse cx="17" cy="82" rx="7" ry="15" transform="rotate(-43 17 82)"/><ellipse cx="79" cy="67" rx="7" ry="15" transform="rotate(42 79 67)"/></svg></div>
+    <div class="leaf b"><svg viewBox="0 0 100 140" fill="none" stroke="#5c7c63" stroke-width="1.4"><path d="M45 138C43 97 51 52 79 7"/><path d="M48 112C28 102 16 87 8 68M55 88C75 78 84 63 92 48M61 64C45 55 37 42 33 28"/><ellipse cx="17" cy="82" rx="7" ry="15" transform="rotate(-43 17 82)"/><ellipse cx="79" cy="67" rx="7" ry="15" transform="rotate(42 79 67)"/></svg></div>
+    <div class="hero-content reveal">
+      <div class="eyebrow">English Adventures · Английский для детей от 9 лет и взрослых</div>
+      <h1>Английский, на котором <span>вы начинаете говорить</span></h1>
+      <p class="hero-copy">Не просто учим слова и правила — обсуждаем, спорим, смотрим видео, разбираем реальные ситуации и постепенно привыкаем пользоваться английским свободнее. Индивидуальные, парные и групповые занятия в комфортной атмосфере, где можно задавать вопросы, ошибаться и пробовать снова.</p>
+      <div class="hero-actions"><button class="btn orange js-modal">Записаться на пробный урок <span class="arrow">→</span></button><a class="btn light" href="#prices">Выбрать формат занятий <span class="arrow">→</span></a></div>
+      <div class="trustline">Индивидуально · в паре · в группе · онлайн</div>
+    </div>
+    
+    <div class="name-tag"><strong>Ольга Царегородцева</strong>преподаватель английского языка</div>
+  </div>
+  <div class="quickbar reveal">
+    <div class="quick"><i>◎</i><div><strong>Для детей от 9 лет</strong><span>и взрослых</span></div></div>
+    <div class="quick"><i>♧</i><div><strong>Индивидуально · в паре</strong><span>· в группе · онлайн</span></div></div>
+    <div class="quick"><i>▣</i><div><strong>Для взрослых</strong><span>доступны уровни A2–B2</span></div></div>
+    <div class="quick"><i>◇</i><div><strong>Пространство</strong><span>где не страшно ошибаться</span></div></div>
+    <button class="btn js-modal">Записаться <span class="arrow">→</span></button>
+  </div>
+</section>
+
+
+<section class="section" id="about"><div class="shell about-grid">
+  <div class="about-portrait reveal"><img src="assets/olga-about.png" alt="Ольга Царегородцева"></div>
+  <article class="about-copy reveal">
+    <div class="eyebrow">Обо мне</div>
+    <h2>Привет, я Ольга</h2>
+    <p class="about-intro">Я преподаватель английского языка и создатель English Adventures.</p>
+
+    <div class="about-facts">
+      <section class="about-fact about-fact-accent">
+        <div class="about-fact-label">Опыт</div>
+        <div class="about-number">5+</div>
+        <h3>лет преподавательской практики</h3>
+      </section>
+
+      <section class="about-fact">
+        <div class="about-fact-label">Образование</div>
+        <ul class="about-list">
+          <li><strong>СибГМУ</strong> — факультет психологии, бакалавриат с отличием</li>
+          <li><strong>ТГУ</strong> — факультет иностранных языков, направление перевода</li>
+          <li><strong>Профессиональная переподготовка</strong> — учитель английского языка</li>
+        </ul>
+      </section>
+
+      <section class="about-fact">
+        <div class="about-fact-label">Подход</div>
+        <p>Психология, язык и педагогика помогают мне видеть не только текущий уровень ученика, но и то, как ему комфортнее учиться, что его мотивирует и что мешает свободно заговорить.</p>
+        <div class="about-tags">
+          <span>Разговорная практика</span>
+          <span>Актуальные темы</span>
+          <span>Видео</span>
+          <span>Примеры из реальной жизни</span>
+        </div>
+      </section>
+    </div>
+  </article>
+</div></section>
+
+<section class="section method" id="method"><div class="shell">
+  <div class="reveal"><div class="eyebrow">Методика</div><h2 class="section-title">Не учим английский ради упражнений. Учимся им пользоваться.</h2><p class="section-lead">Я строю занятия так, чтобы новые слова и правила не оставались только на странице учебника. Мы сразу стараемся использовать их в речи — обсуждаем ситуации, выражаем мнение, сравниваем опыт и задаём друг другу вопросы.</p></div>
+  <div class="method-grid">
+    <article class="method-item reveal"><div class="method-icon">◯</div><h3>Говорим с первых занятий</h3><p>Диалоги, обсуждения, дискуссии и реальные коммуникативные ситуации. Главная цель — использовать язык, а не только знать правило.</p></article>
+    <article class="method-item reveal"><div class="method-icon">♡</div><h3>Ошибаться можно</h3><p>Ошибка — нормальная часть обучения. Важно сформировать среду, в которой ученик не боится пробовать говорить.</p></article>
+    <article class="method-item reveal"><div class="method-icon">▤</div><h3>Объясняем через жизнь</h3><p>Сложные конструкции объясняются на понятных, бытовых и запоминающихся примерах.</p></article>
+    <article class="method-item reveal"><div class="method-icon">◌</div><h3>Говорим о том, что действительно интересно</h3><p>Современные темы, видео и возможность предлагать собственные материалы для обсуждения.</p></article>
+    <article class="method-item reveal"><div class="method-icon">♙</div><h3>Обратная связь лично для ученика</h3><p>Проверка домашних заданий, комментарии по пройденному материалу, адаптация занятий под уровень и цели.</p></article>
+  </div>
+  <div class="route reveal" aria-label="Как появляется результат"><span class="node"><b>1</b>Понимаю</span><span class="dash"></span><span class="node"><b>2</b>пробую</span><span class="dash"></span><span class="node"><b>3</b>ошибаюсь</span><span class="dash"></span><span class="node"><b>4</b>получаю обратную связь</span><span class="dash"></span><span class="node"><b>5</b>пробую снова</span><span class="dash"></span><span class="node"><b>6</b>говорю увереннее</span></div>
+  <p class="method-quote reveal">Именно поэтому язык постепенно перестаёт быть предметом, который вы изучаете, и становится навыком, которым вы пользуетесь.</p>
+</div></section>
+
+<section class="section" id="prices"><div class="shell">
+  <div class="reveal"><div class="eyebrow">Форматы и цены</div><h2 class="section-title">Выберите формат, в котором вам комфортно учиться</h2><p class="section-lead">Не всем нужен один и тот же формат. Кому-то важно максимальное внимание преподавателя, кому-то — постоянный собеседник, а кому-то именно группа помогает преодолеть страх говорить.</p></div>
+  <div class="price-grid">
+    <article class="price reveal"><div class="method-icon">♧</div><h3>Занятия в группе</h3><div class="cost">от 900 ₽</div><p>Подойдут, если вы хотите больше разговаривать, привыкнуть к речи разных людей и быстрее перестать бояться собственных ошибок.</p><p>На уроках используем диалоги, обсуждения, дебаты и другие форматы совместной работы. Можно наблюдать за тем, как отвечают другие, учиться на чужих примерах и сохранять мотивацию благодаря общей динамике группы.</p><p>А ещё это возможность познакомиться с людьми, которые идут к той же цели, что и вы.</p><button class="btn choose" data-format="группа">Хочу в группу <span class="arrow">→</span></button></article>
+    <article class="price featured reveal"><div class="method-icon">♧</div><h3>Занятия в паре</h3><div class="cost">от 1 200 ₽</div><p>Хороший баланс между персональным вниманием преподавателя и настоящей разговорной практикой.</p><p>У вас всегда есть собеседник примерно вашего уровня: можно обсуждать опыт, спорить, сравнивать точки зрения, помогать друг другу и выполнять больше интерактивных заданий.</p><p>Парный формат особенно комфортен для тех, кому пока не хочется заниматься в большой группе, но индивидуальных занятий недостаточно для живого диалога.</p><button class="btn orange choose" data-format="пара">Хочу заниматься в паре <span class="arrow">→</span></button></article>
+    <article class="price reveal"><div class="method-icon">♙</div><h3>Индивидуальные занятия</h3><div class="cost">от 1 800 ₽</div><p>Максимум внимания именно вашим задачам.</p><p>Темп, материалы, содержание занятий и разговорные темы можно гибче подстраивать под ваш уровень и конкретную цель.</p><p>Подойдёт тем, кому важно двигаться по собственной траектории и получать максимум персональной обратной связи.</p><button class="btn choose" data-format="индивидуально">Хочу заниматься индивидуально <span class="arrow">→</span></button></article>
+  </div>
+  <div class="form-strip reveal" id="formBlock"><h3>Не знаете, что выбрать?</h3><p>Расскажите мне немного о себе и своей цели. На пробном занятии определим ваш уровень, обсудим задачи и поймём, какой формат будет наиболее комфортным.</p>
+    <form class="inline-form demo-form"><input class="field" name="name" placeholder="Имя" required><input class="field" name="age" placeholder="Возраст" required><input class="field" name="level" placeholder="Уровень английского, если знаете"><select class="field format-select" name="format"><option value="">Желаемый формат</option><option>группа</option><option>пара</option><option>индивидуально</option></select><input class="field" name="contact" placeholder="Способ связи" required><button class="btn" type="submit">Записаться на пробный урок <span class="arrow">→</span></button></form>
+    <div class="demo-status">Демонстрационный режим: форма заполнена корректно. Отправка данных подключается отдельно.</div>
+  </div>
+</div></section>
+
+<section class="section" id="reviews"><div class="shell">
+  <div class="reveal"><div class="eyebrow">Отзывы</div><h2 class="section-title">Что говорят ученики</h2></div>
+  <div class="reviews-stage reveal">
+    <article class="review-main"><div class="review-photo-wrap"><img class="review-photo" src="assets/review-placeholder.jpg" alt="Фото к отзыву"></div><div><div class="quote-mark">“</div><blockquote>«Занимаюсь английским с Ольгой уже около года и чувствую большой прогресс».</blockquote><small>Отзыв ученицы, занимающейся с Ольгой около года</small></div></article>
+    <div class="review-small-grid"><article class="review-small">Понятные, бытовые примеры</article><article class="review-small">Для меня формат занятий в паре + преподаватель оказался самым продуктивным</article><article class="review-small">Можно предлагать свои темы и видео</article><article class="review-small">Очень ценны личные комментарии по пройденному уроку</article></div>
+  </div>
+</div></section>
+
+<section class="section"><div class="shell">
+  <div class="final-card reveal"><div class="final-copy"><svg class="topo" viewBox="0 0 300 220" fill="none" stroke="white"><path d="M10 160c35-80 70-78 105-12s73 58 105-18 58-67 77-20"/><path d="M0 184c42-84 82-91 120-29s72 78 109-3 61-78 80-27"/><path d="M-10 205c57-82 96-103 139-43s71 87 108 10 61-83 78-36"/></svg><div class="eyebrow" style="color:#d6e5dd">English Adventures</div><h2>Возможно, ваш следующий English Adventure начинается здесь</h2><p>Чтобы начать говорить на английском увереннее, не обязательно сначала выучить всё. Можно начать с одного занятия.</p><p>Познакомимся, определим ваш уровень, обсудим цели и выберем формат, в котором вам будет комфортно двигаться дальше.</p><div class="final-actions"><button class="btn orange js-modal">Записаться на пробный урок <span class="arrow">→</span></button><button class="btn light js-question">Задать Ольге вопрос</button></div></div></div>
+</div></section>
+</main>
+<footer class="footer"><div class="shell footer-row"><a class="brand" href="#top"><span class="logo-mark"></span><span>English<br>Adventures<small>Ольга Царегородцева</small></span></a><span>Ольга Царегородцева<br>преподаватель английского языка</span><span>VK</span><span>Telegram</span><span class="footer-spacer"></span><span>Политика конфиденциальности</span><span>Согласие на обработку персональных данных</span></div></footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-card"><div class="modal-head"><div><div class="eyebrow">English Adventures</div><h3 id="modalTitle">Записаться на пробный урок</h3></div><button class="close" id="closeModal" aria-label="Закрыть">×</button></div><form class="modal-form demo-form"><input class="field" name="name" placeholder="Имя" required><input class="field" name="age" placeholder="Возраст" required><input class="field" name="level" placeholder="Уровень английского, если знаете"><select class="field format-select" name="format"><option value="">Желаемый формат</option><option>группа</option><option>пара</option><option>индивидуально</option></select><input class="field" name="contact" placeholder="Способ связи" required><textarea class="field" name="comment" rows="4" placeholder="Комментарий"></textarea><button class="btn orange" type="submit">Записаться на пробный урок <span class="arrow">→</span></button></form><div class="demo-status">Демонстрационный режим: форма заполнена корректно. Отправка данных подключается отдельно.</div></div></div>
+<script>
+const $=(s,c=document)=>c.querySelector(s), $$=(s,c=document)=>[...c.querySelectorAll(s)];
+const header=$('#header'),progress=$('#progress'), hero=$('#heroImg');
+addEventListener('scroll',()=>{const y=scrollY;header.classList.toggle('scrolled',y>30);const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h?y/h*100:0)+'%';if(innerWidth>720&&hero)hero.style.transform=`scaleX(-1) scale(${1.015+y*.000025}) translateY(${y*.025}px)`},{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});$$('.reveal').forEach(el=>io.observe(el));
+const modal=$('#modal');function openModal(){modal.classList.add('open');document.body.style.overflow='hidden'}function closeModal(){modal.classList.remove('open');document.body.style.overflow=''}$$('.js-modal').forEach(b=>b.addEventListener('click',openModal));$('#closeModal').addEventListener('click',closeModal);modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+const menuBtn=$('#menuBtn'),panel=$('#mobilePanel');menuBtn.addEventListener('click',()=>panel.classList.toggle('open'));$$('#mobilePanel a').forEach(a=>a.addEventListener('click',()=>panel.classList.remove('open')));
+$$('.choose').forEach(b=>b.addEventListener('click',()=>{$$('.format-select').forEach(s=>s.value=b.dataset.format);$('#formBlock').scrollIntoView({behavior:'smooth',block:'center'});setTimeout(()=>$('.inline-form input').focus(),550)}));
+$$('.js-question').forEach(b=>b.addEventListener('click',()=>{openModal();setTimeout(()=>$('.modal-form textarea').focus(),220)}));
+$$('.demo-form').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();if(!f.reportValidity())return;const status=f.parentElement.querySelector('.demo-status');if(status)status.classList.add('show')}));
+
+// subtle magnetic buttons
+$$('.btn').forEach(btn=>{btn.addEventListener('mousemove',e=>{if(innerWidth<900)return;const r=btn.getBoundingClientRect(),x=e.clientX-r.left-r.width/2,y=e.clientY-r.top-r.height/2;btn.style.transform=`translate(${x*.06}px,${y*.08}px) translateY(-2px)`});btn.addEventListener('mouseleave',()=>btn.style.transform='')});
+</script>
+</body></html>
